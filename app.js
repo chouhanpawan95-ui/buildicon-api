@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const registrationRoutes = require('./routes/registrationRoutes');
 const authRoutes = require('./routes/authRoutes');
+const engineerVisitRoutes = require('./routes/engineerVisitRoutes');
 
 const app = express();
 
@@ -12,5 +13,6 @@ app.use(bodyParser.json());
 // Base route
 app.use('/api/registrations', registrationRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/engineer-visits', engineerVisitRoutes);
 
 module.exports = app;
